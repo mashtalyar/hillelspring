@@ -11,12 +11,13 @@ import java.util.List;
 public class PhoneService {
 
     private final PhoneRepository phoneRepository;
+
     @Autowired
     public PhoneService(PhoneRepository phoneRepository) {
         this.phoneRepository = phoneRepository;
     }
 
-    public List<Phone> getAll(){
+    public List<Phone> getAll() {
         return phoneRepository.getAll();
     }
 }

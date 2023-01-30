@@ -2,8 +2,7 @@ package ua.ithillel.hillelspring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import ua.ithillel.hillelspring.configuration.BeanConfiguration;
+import org.springframework.context.ConfigurableApplicationContext;
 import ua.ithillel.hillelspring.controller.PhoneController;
 import ua.ithillel.hillelspring.entity.Phone;
 
@@ -12,10 +11,11 @@ import java.util.List;
 @SpringBootApplication
 public class HillelspringApplication {
     public static void main(String[] args) {
-        SpringApplication.run(HillelspringApplication.class, args);
-        final AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BeanConfiguration.class);
+//        SpringApplication.run(HillelspringApplication.class, args);
+//        final AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BeanConfiguration.class);
+        final ConfigurableApplicationContext context = SpringApplication.run(HillelspringApplication.class, args);
         final PhoneController phoneController = context.getBean(PhoneController.class);
-        List<Phone> all = phoneController.getAll();
+        final List<Phone> all = phoneController.getAll();
         all.forEach(System.out::println);
 //        final String stringBean = context.getBean("stringBean", String.class);
 //        final Phone customPhone = context.getBean("getCustomPhone", Phone.class);

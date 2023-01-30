@@ -12,9 +12,10 @@ public class BeanConfiguration {
     private String botName;
     @Value("${bot.hp}")
     private int botHP;
+
     @Bean
     @Scope("singleton")
-    public String stringBean(){
+    public String stringBean() {
         return "stringBean";
     }
 
@@ -25,12 +26,12 @@ public class BeanConfiguration {
     }
 
     @Bean
-    public String getBotName(){
+    public String getBotName() {
         return botName;
     }
 
     @Bean
-    public int getBotHP(){
+    public int getBotHP() {
         return botHP;
     }
 }

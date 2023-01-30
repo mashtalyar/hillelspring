@@ -10,12 +10,15 @@ import java.util.List;
 @Repository
 public class PhoneRepository {
     private final PhoneHelper phoneHelper;
+
     @Autowired
     public PhoneRepository(PhoneHelper phoneHelper) {
         this.phoneHelper = phoneHelper;
     }
 
-    public List<Phone> getAll(){
+    public List<Phone> getAll() {
         return phoneHelper.createPhone();
-    };
+    }
+
+
 }
