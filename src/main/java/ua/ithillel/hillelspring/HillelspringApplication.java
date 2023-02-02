@@ -11,12 +11,12 @@ import java.util.List;
 @SpringBootApplication
 public class HillelspringApplication {
     public static void main(String[] args) {
-//        SpringApplication.run(HillelspringApplication.class, args);
+        SpringApplication.run(HillelspringApplication.class, args);
 //        final AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BeanConfiguration.class);
-        final ConfigurableApplicationContext context = SpringApplication.run(HillelspringApplication.class, args);
-        final PhoneController phoneController = context.getBean(PhoneController.class);
-        final List<Phone> all = phoneController.getAll();
-        all.forEach(System.out::println);
+//        final ConfigurableApplicationContext context = SpringApplication.run(HillelspringApplication.class, args);
+//        final PhoneController phoneController = context.getBean(PhoneController.class);
+//        final List<Phone> all = phoneController.getAll();
+//        all.forEach(System.out::println);
 //        final String stringBean = context.getBean("stringBean", String.class);
 //        final Phone customPhone = context.getBean("getCustomPhone", Phone.class);
 //        System.out.println(stringBean);
